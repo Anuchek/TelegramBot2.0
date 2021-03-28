@@ -5,6 +5,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.telegram.telegrambots.meta.api.objects.Update;
+
+import java.io.File;
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,6 +21,8 @@ class TelegramBotTest {
     ObjectMapper objectMapper;
 
     @Test
-    void onUpdateReceived() {
+    void onUpdateReceived() throws IOException {
+        Update update = objectMapper.readValue(new File("src/test/resources/update.json"), Update.class);
+        telegramBot.onUpdateReceived(update);
     }
 }

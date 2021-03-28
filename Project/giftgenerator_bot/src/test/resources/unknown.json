@@ -1,14 +1,14 @@
 {
-  "update_id": 283653702,
+  "update_id": 283653701,
   "message": {
     "chatId": 724234813,
-    "reply": false,
+    "superGroupMessage": false,
     "groupMessage": false,
     "userMessage": true,
     "channelMessage": false,
     "command": true,
-    "superGroupMessage": false,
-    "message_id": 14,
+    "reply": false,
+    "message_id": 13,
     "from": {
       "bot": false,
       "id": 724234813,
@@ -17,18 +17,18 @@
       "username": "veg_parsley",
       "language_code": "en"
     },
-    "date": 1616964154,
+    "date": 1616961682,
     "chat": {
-      "userChat": true,
-      "channelChat": false,
       "groupChat": false,
+      "userChat": true,
       "superGroupChat": false,
+      "channelChat": false,
       "id": 724234813,
       "type": "private",
       "first_name": "Parsley",
       "username": "veg_parsley"
     },
-    "text": "/start",
+    "text": "Nothing",
     "entities": [
       {
         "type": "bot_command",
