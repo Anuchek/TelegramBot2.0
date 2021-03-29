@@ -16,17 +16,17 @@ public class MessageService {
             Message message = update.getMessage();
             sendMessage.setChatId(message.getChatId());
 
-            if (message != null && message.hasText()){
+            if (message.hasText()){
                 String magText = message.getText();
 
                 if (magText.equals("/start")) {
                     return sendMessage.setText("Hello! I am a bot for generating gifts. If you're ready, type /generate and we'll start");
                 }
                 else if (magText.equals("/support")) {
-                    return sendMessage.setText("Contact information here");
+                    return sendMessage.setText("Contact information here: support@gmail.com");
                 }
                 else if (magText.equals("/donate")) {
-                    return sendMessage.setText("Information needed to donate here");
+                    return sendMessage.setText("Donate.allert.com");
                 }
                 else if (magText.equals("/help")) {
                     return sendMessage.setText("Type /support to see contact information. Type /donate to see donate iformation");

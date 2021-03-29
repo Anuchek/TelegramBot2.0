@@ -38,7 +38,7 @@ class MessageServiceTest extends GiftgeneratorBotApplicationTests {
     void onSupportReceived() throws IOException {
         Update update = objectMapper.readValue(new File("src/test/resources/support.json"), Update.class);
         SendMessage actualResult = messageService.onUpdateReceived(update);
-        SendMessage expectedResult = makeMessage("Contact information here");
+        SendMessage expectedResult = makeMessage("Contact information here: support@gmail.com");
         Assertions.assertEquals(expectedResult,actualResult);
     }
 
@@ -46,7 +46,7 @@ class MessageServiceTest extends GiftgeneratorBotApplicationTests {
     void onDonateReceived() throws IOException {
         Update update = objectMapper.readValue(new File("src/test/resources/donate.json"), Update.class);
         SendMessage actualResult = messageService.onUpdateReceived(update);
-        SendMessage expectedResult = makeMessage("Information needed to donate here");
+        SendMessage expectedResult = makeMessage("Donate.allert.com");
         Assertions.assertEquals(expectedResult,actualResult);
     }
 
