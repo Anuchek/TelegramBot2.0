@@ -1,10 +1,10 @@
 package by.jrr.giftgenerator_bot.service;
 
-public class User {
-    private String gender;
+public class GiftUser {
+    private char gender;
     private String relationship;
 
-    public void setGender(String gender) {
+    public void setGender(Character gender) {
         this.gender = gender;
     }
 
@@ -16,7 +16,7 @@ public class User {
         return relationship;
     }
 
-    public String getGender() {
+    public char getGender() {
         return gender;
     }
 }
