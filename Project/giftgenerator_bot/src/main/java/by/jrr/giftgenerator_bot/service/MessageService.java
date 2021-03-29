@@ -20,17 +20,21 @@ public class MessageService {
                 String magText = message.getText();
 
                 if (magText.equals("/start")) {
-                    return sendMessage.setText("Start");
+                    return sendMessage.setText("Hello! I am a bot for generating gifts. If you're ready, type /generate and we'll start");
                 }
                 else if (magText.equals("/support")) {
-                    return sendMessage.setText("Support");
+                    return sendMessage.setText("Contact information here");
                 }
                 else if (magText.equals("/donate")) {
-                    return sendMessage.setText("Donate");
+                    return sendMessage.setText("Information needed to donate here");
                 }
+                else if (magText.equals("/help")) {
+                    return sendMessage.setText("Type /support to see contact information. Type /donate to see donate iformation");
+                }
+
             }
         }
-        return sendMessage.setText("Unknown message");
+        return sendMessage.setText("Can't recognize command. Type /help to see the list of commmands");
     }
 
 }
