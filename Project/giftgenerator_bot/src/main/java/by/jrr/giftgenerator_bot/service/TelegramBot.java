@@ -29,11 +29,11 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-//        try {
-//            objectMapper.writeValue(new File("src/test/resources/update.json"),update);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            objectMapper.writeValue(new File("src/test/resources/update.json"),update);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
        SendMessage sendMessage = messageService.onUpdateReceived(update);
         try {

@@ -12,8 +12,6 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.io.File;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest(classes = {TelegramBot.class, Mapper.class})
 class TelegramBotTest {
 
@@ -31,7 +29,7 @@ class TelegramBotTest {
     @Test
     void sendMessage() throws TelegramApiException {
         SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(724234813L);
+        sendMessage.setChatId(206198510L);
         sendMessage.setText("Hi");
         telegramBot.execute(sendMessage);
     }
