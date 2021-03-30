@@ -31,7 +31,7 @@ class TelegramBotTest {
     @Test
     void sendMessage() throws TelegramApiException {
         SendMessage sendMessage = new SendMessage();
-        sendMessage.setChatId(724234813L);
+        sendMessage.setChatId(206198510L);
         sendMessage.setText("Hi");
         telegramBot.execute(sendMessage);
     }
