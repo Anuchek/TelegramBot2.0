@@ -1,1 +1,40 @@
-{"update_id":283653950,"message":{"chatId":206198510,"userMessage":true,"groupMessage":false,"channelMessage":false,"reply":false,"command":true,"superGroupMessage":false,"message_id":504,"from":{"bot":false,"id":206198510,"first_name":"Andrew","is_bot":false,"last_name":"Cherednichenko","username":"anuchek","language_code":"ru"},"date":1617127404,"chat":{"channelChat":false,"superGroupChat":false,"groupChat":false,"userChat":true,"id":206198510,"type":"private","first_name":"Andrew","last_name":"Cherednichenko","username":"anuchek"},"text":"/next","entities":[{"type":"bot_command","offset":0,"length":5}]}}
+{
+  "update_id": 283653705,
+  "message": {
+    "chatId": 724234813,
+    "command": true,
+    "reply": false,
+    "groupMessage": false,
+    "channelMessage": false,
+    "userMessage": true,
+    "superGroupMessage": false,
+    "message_id": 18,
+    "from": {
+      "bot": false,
+      "id": 724234813,
+      "first_name": "Parsley",
+      "is_bot": false,
+      "username": "veg_parsley",
+      "language_code": "en"
+    },
+    "date": 1616965839,
+    "chat": {
+      "groupChat": false,
+      "userChat": true,
+      "superGroupChat": false,
+      "channelChat": false,
+      "id": 724234813,
+      "type": "private",
+      "first_name": "Parsley",
+      "username": "veg_parsley"
+    },
+    "text": "Can't recognize command. Type /help to see the list of commmands",
+    "entities": [
+      {
+        "type": "bot_command",
+        "offset": 0,
+        "length": 6
+      }
+    ]
+  }
+}

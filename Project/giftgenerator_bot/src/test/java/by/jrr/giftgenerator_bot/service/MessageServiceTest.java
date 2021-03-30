@@ -1,5 +1,6 @@
 package by.jrr.giftgenerator_bot.service;
 
+import by.jrr.giftgenerator_bot.GiftgeneratorBotApplicationTests;
 import by.jrr.giftgenerator_bot.config.Mapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
@@ -15,8 +16,8 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(classes = {TelegramBot.class, Mapper.class, MessageService.class})
-class MessageServiceTest {
+
+class MessageServiceTest extends GiftgeneratorBotApplicationTests {
 
     @Autowired
     TelegramBot telegramBot;
@@ -29,7 +30,7 @@ class MessageServiceTest {
     void onStartReceived() throws IOException {
         Update update = objectMapper.readValue(new File("src/test/resources/start.json"), Update.class);
         SendMessage actualResult = messageService.onUpdateReceived(update);
-        SendMessage expectedResult = makeMessage("Start");
+        SendMessage expectedResult = makeMessage("Hello! I am a bot for generating gifts. If you're ready, type /generate and we'll start");
         Assertions.assertEquals(expectedResult,actualResult);
     }
 
@@ -37,7 +38,7 @@ class MessageServiceTest {
     void onSupportReceived() throws IOException {
         Update update = objectMapper.readValue(new File("src/test/resources/support.json"), Update.class);
         SendMessage actualResult = messageService.onUpdateReceived(update);
-        SendMessage expectedResult = makeMessage("Support");
+        SendMessage expectedResult = makeMessage("Contact information here: support@gmail.com");
         Assertions.assertEquals(expectedResult,actualResult);
     }
 
@@ -45,15 +46,16 @@ class MessageServiceTest {
     void onDonateReceived() throws IOException {
         Update update = objectMapper.readValue(new File("src/test/resources/donate.json"), Update.class);
         SendMessage actualResult = messageService.onUpdateReceived(update);
-        SendMessage expectedResult = makeMessage("Donate");
+        SendMessage expectedResult = makeMessage("Donate.allert.com");
         Assertions.assertEquals(expectedResult,actualResult);
     }
 
+
     @Test
-    void onUnknownReceived() throws IOException {
-        Update update = objectMapper.readValue(new File("src/test/resources/unknown.json"), Update.class);
+    void onHelpReceived() throws IOException {
+        Update update = objectMapper.readValue(new File("src/test/resources/help.json"), Update.class);
         SendMessage actualResult = messageService.onUpdateReceived(update);
-        SendMessage expectedResult = makeMessage("Unknown message");
+        SendMessage expectedResult = makeMessage("Type /support to see contact information. Type /donate to see donate iformation");
         Assertions.assertEquals(expectedResult,actualResult);
     }
 

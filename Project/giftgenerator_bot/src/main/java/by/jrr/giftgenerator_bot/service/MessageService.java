@@ -16,6 +16,7 @@ public class MessageService {
         if (update != null){
             Message message = update.getMessage();
             sendMessage.setChatId(message.getChatId());
+
             if (message.hasText()){
                 String magText = message.getText();
                 if (magText.equals("/start")) {
@@ -26,13 +27,20 @@ public class MessageService {
                             "/donate - to donate us\n" +
                             "/generategift\n" +
                             "/reset - reset parametrs");
+
                 }
                 else if (magText.equals("/support")) {
-                    return sendMessage.setText("Support");
+                    return sendMessage.setText("Contact information here: support@gmail.com");
                 }
                 else if (magText.equals("/donate")) {
-                    return sendMessage.setText("Donate");
+                    return sendMessage.setText("Donate.allert.com");
                 }
+
+                else if (magText.equals("/help")) {
+                    return sendMessage.setText("Type /support to see contact information. Type /donate to see donate iformation");
+                }
+
+              
                 else if(magText.equals("/reset")) {
                     giftUser.setGender(null);
                     giftUser.setRelationship(null);
@@ -110,7 +118,7 @@ public class MessageService {
                 }
             }
         }
-        return sendMessage.setText("Unknown message");
+        return sendMessage.setText("Can't recognize command. Type /help to see the list of commmands");
     }
     public SendMessage getPresent(Update update, String gender, String relation){
         Message message = update.getMessage();

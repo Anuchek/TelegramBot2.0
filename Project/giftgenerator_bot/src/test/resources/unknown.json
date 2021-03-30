@@ -28,7 +28,7 @@
       "first_name": "Parsley",
       "username": "veg_parsley"
     },
-    "text": "Nothing",
+    "text": "unknown",
     "entities": [
       {
         "type": "bot_command",
