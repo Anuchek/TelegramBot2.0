@@ -1,6 +1,6 @@
-package by.jrr.giftgenerator_bot.service;
+package by.jrr.giftgeneratorBot.service;
 
-import by.jrr.giftgenerator_bot.GiftgeneratorBotApplicationTests;
+import by.jrr.giftgeneratorBot.GiftgeneratorBotApplicationTests;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

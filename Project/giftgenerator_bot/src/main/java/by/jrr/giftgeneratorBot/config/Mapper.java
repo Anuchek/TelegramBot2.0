@@ -1,4 +1,4 @@
-package by.jrr.giftgenerator_bot.config;
+package by.jrr.giftgeneratorBot.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +9,6 @@ public class Mapper {
 
     @Bean
     public ObjectMapper objectMapper(){
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper;
+        return new ObjectMapper();
     }
 }

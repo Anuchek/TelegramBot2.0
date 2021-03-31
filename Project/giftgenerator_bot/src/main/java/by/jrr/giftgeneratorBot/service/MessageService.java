@@ -1,6 +1,6 @@
-package by.jrr.giftgenerator_bot.service;
+package by.jrr.giftgeneratorBot.service;
 
-import by.jrr.giftgenerator_bot.DataBase.DataBaseImitator;
+import by.jrr.giftgeneratorBot.DataBase.DataBaseImitator;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;

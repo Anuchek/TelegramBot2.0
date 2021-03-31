@@ -1,4 +1,4 @@
-package by.jrr.giftgenerator_bot;
+package by.jrr.giftgeneratorBot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,5 +10,4 @@ public class GiftgeneratorBotApplication {
 		ApiContextInitializer.init();
 		SpringApplication.run(GiftgeneratorBotApplication.class, args);
 	}
-
 }
