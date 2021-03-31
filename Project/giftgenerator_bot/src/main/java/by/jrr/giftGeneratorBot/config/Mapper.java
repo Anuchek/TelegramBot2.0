@@ -1,4 +1,4 @@
-package by.jrr.giftgeneratorBot.config;
+package by.jrr.giftGeneratorBot.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;

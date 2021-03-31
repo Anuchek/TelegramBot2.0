@@ -1,6 +1,6 @@
-package by.jrr.giftgeneratorBot.service;
+package by.jrr.giftGeneratorBot.service;
 
-import by.jrr.giftgeneratorBot.DataBase.DataBaseImitator;
+import by.jrr.giftGeneratorBot.DataBase.DataBaseImitator;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -8,6 +8,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 @Service
 public class MessageService {
+    static final String genderFirstText = "You need to choose gender first\n" + "Plz choose between /man and /woman";
+    static final String presentText = "All preparation`s been done! Write /present to see our suggestions!";
     int i = 0;
     SendMessage sendMessage = new SendMessage();
     DataBaseImitator dataBaseImitator = new DataBaseImitator();
@@ -50,27 +52,24 @@ public class MessageService {
                 }
                 else if (magText.equals("/husband")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText("You need to choose gender first\n" +
-                                "Plz choose between /man and /woman");
+                        return sendMessage.setText(genderFirstText);
                     }
                     giftUser.setRelationship("husband");
-                    return sendMessage.setText("All preparation`s been done! Write /present to see our suggestions!");
+                    return sendMessage.setText(presentText);
                 }
                 else if (magText.equals("/father")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText("You need to choose gender first\n" +
-                                "Plz choose between /man and /woman");
+                        return sendMessage.setText(genderFirstText);
                     }
                     giftUser.setRelationship("father");
-                    return sendMessage.setText("All preparation`s been done! Write /present to see our suggestions!");
+                    return sendMessage.setText(presentText);
                 }
                 else if (magText.equals("/son")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText("You need to choose gender first\n" +
-                                "Plz choose between /man and /woman");
+                        return sendMessage.setText(genderFirstText);
                     }
                     giftUser.setRelationship("son");
-                    return sendMessage.setText("All preparation`s been done! Write /present to see our suggestions!");
+                    return sendMessage.setText(presentText);
                 }
                 else if (magText.equals("/woman")) {
                     giftUser.setGender("female");
@@ -81,27 +80,24 @@ public class MessageService {
                 }
                 else if (magText.equals("/wife")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText("You need to choose gender first\n" +
-                                "Plz choose between /man and /woman");
+                        return sendMessage.setText(genderFirstText);
                     }
                     giftUser.setRelationship("wife");
-                    return sendMessage.setText("All preparation`s been done! Write /present to see our suggestions!");
+                    return sendMessage.setText(presentText);
                 }
                 else if (magText.equals("/mother")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText("You need to choose gender first\n" +
-                                "Plz choose between /man and /woman");
+                        return sendMessage.setText(genderFirstText);
                     }
                     giftUser.setRelationship("mother");
-                    return sendMessage.setText("All preparation`s been done! Write /present to see our suggestions!");
+                    return sendMessage.setText(presentText);
                 }
                 else if (magText.equals("/daughter")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText("You need to choose gender first\n" +
-                                "Plz choose between /man and /woman");
+                        return sendMessage.setText(genderFirstText);
                     }
                     giftUser.setRelationship("daughter");
-                    return sendMessage.setText("All preparation`s been done! Write /present to see our suggestions!");
+                    return sendMessage.setText(presentText);
                 }
                 else if (magText.equals("/present")) {
                     if (giftUser.getGender() != null && giftUser.getRelationship() != null){

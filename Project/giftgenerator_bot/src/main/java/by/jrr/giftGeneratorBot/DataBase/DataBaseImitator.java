@@ -1,23 +1,23 @@
-package by.jrr.giftgeneratorBot.DataBase;
+package by.jrr.giftGeneratorBot.DataBase;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DataBaseImitator {
-    final static String male = "male";
-    final static String female = "female";
+    static final String MALE = "male";
+    static final  String FEMALE = "female";
 
     public List<String> switcher(String gender, String relation){
-        if (gender.equals(male) && relation.equals("father")){
+        if (gender.equals(MALE) && relation.equals("father")){
             return maleFatherArray();
-        } else if (gender.equals(male) && relation.equals("husband")){
+        } else if (gender.equals(MALE) && relation.equals("husband")){
             return maleHusbandArray();
-        } else if (gender.equals(male) && relation.equals("son")){
+        } else if (gender.equals(MALE) && relation.equals("son")){
             return maleSonArray();
-        } else if (gender.equals(female) && relation.equals("wife")){
+        } else if (gender.equals(FEMALE) && relation.equals("wife")){
             return femaleWifeArray();
-        } else if (gender.equals(female) && relation.equals("mother")){
+        } else if (gender.equals(FEMALE) && relation.equals("mother")){
             return femaleMotherArray();
-        } else if (gender.equals(female) && relation.equals("daughter")){
+        } else if (gender.equals(FEMALE) && relation.equals("daughter")){
             return femaleDaughterArray();
         } else {
             throw new RuntimeException("Wrong parameters"); //make own Exception

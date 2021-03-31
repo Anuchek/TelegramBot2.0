@@ -1,6 +1,6 @@
-package by.jrr.giftgeneratorBot.service;
+package by.jrr.giftGeneratorBot.service;
 
-import by.jrr.giftgeneratorBot.GiftgeneratorBotApplicationTests;
+import by.jrr.giftGeneratorBot.GiftGeneratorBotApplicationTests;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-class TelegramBotTest extends GiftgeneratorBotApplicationTests {
+class TelegramBotTest extends GiftGeneratorBotApplicationTests {
 
     @Autowired
     TelegramBot telegramBot;
