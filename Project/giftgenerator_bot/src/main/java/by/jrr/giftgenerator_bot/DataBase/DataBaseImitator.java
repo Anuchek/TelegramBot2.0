@@ -3,17 +3,17 @@ import java.util.ArrayList;
 
 public class DataBaseImitator {
     public ArrayList<String> switcher(String gender, String relation){
-        if (gender == "male" && relation == "father"){
+        if (gender.equals("male") && relation.equals("father")){
             return m_father_array();
-        } else if (gender == "male" && relation == "husband"){
+        } else if (gender.equals("male") && relation.equals("husband")){
             return m_husband_array();
-        } else if (gender == "male" && relation == "son"){
+        } else if (gender.equals("male") && relation.equals("son")){
             return m_son_array();
-        } else if (gender == "female" && relation == "wife"){
+        } else if (gender.equals("female") && relation.equals("wife")){
             return f_wife_array();
-        } else if (gender == "female" && relation == "mother"){
+        } else if (gender.equals("female") && relation.equals("mother")){
             return f_mother_array();
-        } else if (gender == "female" && relation == "daughter"){
+        } else if (gender.equals("female") && relation.equals("daughter")){
             return f_daughter_array();
         } else {
             throw new RuntimeException("Wrong parameters");
