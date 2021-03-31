@@ -1,6 +1,6 @@
-package by.jrr.giftGeneratorBot.service;
+package by.jrr.giftgeneratorbot.service;
 
-import by.jrr.giftGeneratorBot.DataBase.DataBaseImitator;
+import by.jrr.giftgeneratorbot.database.DataBaseImitator;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -8,8 +8,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 @Service
 public class MessageService {
-    static final String genderFirstText = "You need to choose gender first\n" + "Plz choose between /man and /woman";
-    static final String presentText = "All preparation`s been done! Write /present to see our suggestions!";
+    static final String GENDER_FIRST_TEXT = "You need to choose gender first\n" + "Plz choose between /man and /woman";
+    static final String PRESENT_TEXT = "All preparation`s been done! Write /present to see our suggestions!";
     int i = 0;
     SendMessage sendMessage = new SendMessage();
     DataBaseImitator dataBaseImitator = new DataBaseImitator();
@@ -52,24 +52,24 @@ public class MessageService {
                 }
                 else if (magText.equals("/husband")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText(genderFirstText);
+                        return sendMessage.setText(GENDER_FIRST_TEXT);
                     }
                     giftUser.setRelationship("husband");
-                    return sendMessage.setText(presentText);
+                    return sendMessage.setText(PRESENT_TEXT);
                 }
                 else if (magText.equals("/father")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText(genderFirstText);
+                        return sendMessage.setText(GENDER_FIRST_TEXT);
                     }
                     giftUser.setRelationship("father");
-                    return sendMessage.setText(presentText);
+                    return sendMessage.setText(PRESENT_TEXT);
                 }
                 else if (magText.equals("/son")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText(genderFirstText);
+                        return sendMessage.setText(GENDER_FIRST_TEXT);
                     }
                     giftUser.setRelationship("son");
-                    return sendMessage.setText(presentText);
+                    return sendMessage.setText(PRESENT_TEXT);
                 }
                 else if (magText.equals("/woman")) {
                     giftUser.setGender("female");
@@ -80,24 +80,24 @@ public class MessageService {
                 }
                 else if (magText.equals("/wife")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText(genderFirstText);
+                        return sendMessage.setText(GENDER_FIRST_TEXT);
                     }
                     giftUser.setRelationship("wife");
-                    return sendMessage.setText(presentText);
+                    return sendMessage.setText(PRESENT_TEXT);
                 }
                 else if (magText.equals("/mother")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText(genderFirstText);
+                        return sendMessage.setText(GENDER_FIRST_TEXT);
                     }
                     giftUser.setRelationship("mother");
-                    return sendMessage.setText(presentText);
+                    return sendMessage.setText(PRESENT_TEXT);
                 }
                 else if (magText.equals("/daughter")) {
                     if(giftUser.getGender() == null){
-                        return sendMessage.setText(genderFirstText);
+                        return sendMessage.setText(GENDER_FIRST_TEXT);
                     }
                     giftUser.setRelationship("daughter");
-                    return sendMessage.setText(presentText);
+                    return sendMessage.setText(PRESENT_TEXT);
                 }
                 else if (magText.equals("/present")) {
                     if (giftUser.getGender() != null && giftUser.getRelationship() != null){

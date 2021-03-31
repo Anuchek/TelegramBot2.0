@@ -1,4 +1,4 @@
-package by.jrr.giftGeneratorBot.DataBase;
+package by.jrr.giftgeneratorbot.database;
 import java.util.ArrayList;
 import java.util.List;
 
