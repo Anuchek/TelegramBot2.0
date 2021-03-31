@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest(classes = {TelegramBot.class, Mapper.class, MessageService.class})
 public class GiftgeneratorBotApplicationTests {
 
-	//@Test
+	@Test
 	void contextLoads() {
 	}
 
