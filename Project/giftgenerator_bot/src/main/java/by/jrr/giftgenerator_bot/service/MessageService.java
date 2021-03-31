@@ -23,9 +23,9 @@ public class MessageService {
                     return sendMessage.setText("Hi! I`m a GiftGenerator bot. I can help you to choose present! Type /generategift to begin!\n\n " +
                             "All type commands: \n" +
                             "/start - to start working with bot\n" +
+                            "/generategift\n" +
                             "/support - support\n" +
                             "/donate - to donate us\n" +
-                            "/generategift\n" +
                             "/reset - reset parametrs");
 
                 }
