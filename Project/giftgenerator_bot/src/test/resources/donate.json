@@ -28,7 +28,7 @@
       "first_name": "Parsley",
       "username": "veg_parsley"
     },
-    "text": "/help",
+    "text": "/donate",
     "entities": [
       {
         "type": "bot_command",
