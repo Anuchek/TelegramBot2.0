@@ -16,10 +16,8 @@ public class MessageService {
         if (update != null){
             Message message = update.getMessage();
             sendMessage.setChatId(message.getChatId());
-
             if (message.hasText()){
                 String magText = message.getText();
-
                 if (magText.equals("/support")) {
                     return sendMessage.setText("Contact information here: support@gmail.com");
                 }
@@ -30,8 +28,6 @@ public class MessageService {
                 else if (magText.equals("/help")) {
                     return sendMessage.setText("Type /support to see contact information. Type /donate to see donate iformation");
                 }
-
-              
                 else if(magText.equals("/reset")) {
                     giftUser.setGender(null);
                     giftUser.setRelationship(null);
@@ -111,7 +107,9 @@ public class MessageService {
                     } return sendMessage.setText("Before using command /present you firstly need to use /generategift command!");
                 }
                 else if (magText.equals("/next")) {
-                    return getNextPresent(update, giftUser.getGender(),giftUser.getRelationship());
+                    if (giftUser.getGender() != null && giftUser.getRelationship() != null){
+                        return getNextPresent(update, giftUser.getGender(),giftUser.getRelationship());
+                    } return sendMessage.setText("Before using command /next you firstly need to use /generategift command!");
                 }
             }
         }
