@@ -19,17 +19,8 @@ public class MessageService {
 
             if (message.hasText()){
                 String magText = message.getText();
-                if (magText.equals("/start")) {
-                    return sendMessage.setText("Hi! I`m a GiftGenerator bot. I can help you to choose present! Type /generategift to begin!\n\n " +
-                            "All type commands: \n" +
-                            "/start - to start working with bot\n" +
-                            "/generategift\n" +
-                            "/support - support\n" +
-                            "/donate - to donate us\n" +
-                            "/reset - reset parametrs");
 
-                }
-                else if (magText.equals("/support")) {
+                if (magText.equals("/support")) {
                     return sendMessage.setText("Contact information here: support@gmail.com");
                 }
                 else if (magText.equals("/donate")) {
@@ -45,7 +36,7 @@ public class MessageService {
                     giftUser.setGender(null);
                     giftUser.setRelationship(null);
                     i = 0;
-                    return sendMessage.setText("It is clean now\nUse /generategift one more time!");
+                    return sendMessage.setText("It is clean now \nUse /generategift one more time!");
                 }
                 else if (magText.equals("/generategift")) {
                     return sendMessage.setText("For whom do you want a gift?\n" +
