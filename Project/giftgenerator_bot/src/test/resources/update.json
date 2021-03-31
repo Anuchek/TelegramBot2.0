@@ -1,1 +1,42 @@
-{"update_id":283654149,"message":{"chatId":724234813,"groupMessage":false,"command":true,"userMessage":true,"reply":false,"channelMessage":false,"superGroupMessage":false,"message_id":892,"from":{"bot":false,"id":724234813,"first_name":"Parsley","is_bot":false,"username":"veg_parsley","language_code":"en"},"date":1617188433,"chat":{"superGroupChat":false,"groupChat":false,"channelChat":false,"userChat":true,"id":724234813,"type":"private","first_name":"Parsley","username":"veg_parsley"},"text":"/woman","entities":[{"type":"bot_command","offset":0,"length":6}]}}
+{
+  "update_id": 283654264,
+  "message": {
+    "groupMessage": false,
+    "userMessage": true,
+    "channelMessage": false,
+    "command": true,
+    "reply": false,
+    "chatId": 206198510,
+    "superGroupMessage": false,
+    "message_id": 1067,
+    "from": {
+      "bot": false,
+      "id": 206198510,
+      "first_name": "Andrew",
+      "is_bot": false,
+      "last_name": "Cherednichenko",
+      "username": "anuchek",
+      "language_code": "ru"
+    },
+    "date": 1617199176,
+    "chat": {
+      "userChat": true,
+      "groupChat": false,
+      "channelChat": false,
+      "superGroupChat": false,
+      "id": 206198510,
+      "type": "private",
+      "first_name": "Andrew",
+      "last_name": "Cherednichenko",
+      "username": "anuchek"
+    },
+    "text": "/next",
+    "entities": [
+      {
+        "type": "bot_command",
+        "offset": 0,
+        "length": 5
+      }
+    ]
+  }
+}

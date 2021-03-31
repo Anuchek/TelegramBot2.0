@@ -18,13 +18,15 @@ public class MessageService {
             sendMessage.setChatId(message.getChatId());
             if (message.hasText()){
                 String magText = message.getText();
-                if (magText.equals("/support")) {
+                if (magText.equals("/start")) {
+                    return sendMessage.setText("Type /generategift to start working with bot!");
+                }
+                else if (magText.equals("/support")) {
                     return sendMessage.setText("Contact information here: support@gmail.com");
                 }
                 else if (magText.equals("/donate")) {
                     return sendMessage.setText("Donate.allert.com");
                 }
-
                 else if (magText.equals("/help")) {
                     return sendMessage.setText("Type /support to see contact information. Type /donate to see donate iformation");
                 }
@@ -35,7 +37,7 @@ public class MessageService {
                     return sendMessage.setText("It is clean now \nUse /generategift one more time!");
                 }
                 else if (magText.equals("/generategift")) {
-                    return sendMessage.setText("For whom do you want a gift?\n" +
+                    return sendMessage.setText("For whom do you want to find a gift?\n" +
                             "-man(/man)\n" +
                             "-woman(/woman)\n");
                 }
