@@ -1,14 +1,13 @@
-package by.jrr.giftgenerator_bot;
+package by.jrr.giftgeneratorbot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.telegram.telegrambots.ApiContextInitializer;
 
 @SpringBootApplication
-public class GiftgeneratorBotApplication {
+public class GiftGeneratorBotApplication {
 	public static void main(String[] args) {
 		ApiContextInitializer.init();
-		SpringApplication.run(GiftgeneratorBotApplication.class, args);
+		SpringApplication.run(GiftGeneratorBotApplication.class, args);
 	}
-
 }

@@ -1,23 +1,18 @@
-package by.jrr.giftgenerator_bot.service;
+package by.jrr.giftgeneratorbot.service;
 
-import by.jrr.giftgenerator_bot.GiftgeneratorBotApplicationTests;
-import by.jrr.giftgenerator_bot.config.Mapper;
+import by.jrr.giftgeneratorbot.GiftGeneratorBotApplicationTests;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.io.File;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-
-class MessageServiceTest extends GiftgeneratorBotApplicationTests {
+class MessageServiceTest extends GiftGeneratorBotApplicationTests {
 
     @Autowired
     TelegramBot telegramBot;
@@ -53,7 +48,7 @@ class MessageServiceTest extends GiftgeneratorBotApplicationTests {
     void onHelpReceived() throws IOException {
         Update update = objectMapper.readValue(new File("src/test/resources/help.json"), Update.class);
         SendMessage actualResult = messageService.onUpdateReceived(update);
-        SendMessage expectedResult = makeMessage("Type /support to see contact information. Type /donate to see donate iformation");
+        SendMessage expectedResult = makeMessage("Type /support to see contact information. Type /donate to see donate information");
         Assertions.assertEquals(expectedResult,actualResult);
     }
 

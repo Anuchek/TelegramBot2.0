@@ -1,4 +1,4 @@
-package by.jrr.giftgenerator_bot.service;
+package by.jrr.giftgeneratorbot.service;
 
 public class GiftUser {
     private String gender;
