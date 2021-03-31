@@ -53,7 +53,7 @@ class MessageServiceTest extends GiftgeneratorBotApplicationTests {
     void onHelpReceived() throws IOException {
         Update update = objectMapper.readValue(new File("src/test/resources/help.json"), Update.class);
         SendMessage actualResult = messageService.onUpdateReceived(update);
-        SendMessage expectedResult = makeMessage("Type /support to see contact information. Type /donate to see donate iformation");
+        SendMessage expectedResult = makeMessage("Type /support to see contact information. Type /donate to see donate information");
         Assertions.assertEquals(expectedResult,actualResult);
     }
 

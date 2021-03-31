@@ -28,7 +28,7 @@ public class MessageService {
                     return sendMessage.setText("Donate.allert.com");
                 }
                 else if (magText.equals("/help")) {
-                    return sendMessage.setText("Type /support to see contact information. Type /donate to see donate iformation");
+                    return sendMessage.setText("Type /support to see contact information. Type /donate to see donate information");
                 }
                 else if(magText.equals("/reset")) {
                     giftUser.setGender(null);
