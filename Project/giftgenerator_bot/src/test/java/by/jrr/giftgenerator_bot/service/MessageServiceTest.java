@@ -16,7 +16,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
+@SpringBootTest(classes = {TelegramBot.class, Mapper.class})
 class MessageServiceTest extends GiftgeneratorBotApplicationTests {
 
     @Autowired
@@ -30,7 +30,13 @@ class MessageServiceTest extends GiftgeneratorBotApplicationTests {
     void onStartReceived() throws IOException {
         Update update = objectMapper.readValue(new File("src/test/resources/start.json"), Update.class);
         SendMessage actualResult = messageService.onUpdateReceived(update);
-        SendMessage expectedResult = makeMessage("Hello! I am a bot for generating gifts. If you're ready, type /generate and we'll start");
+        SendMessage expectedResult = makeMessage("Hi! I`m a GiftGenerator bot. I can help you to choose present! Type /generategift to begin!\n\n " +
+                "All type commands: \n" +
+                "/start - to start working with bot\n" +
+                "/generategift\n" +
+                "/support - support\n" +
+                "/donate - to donate us\n" +
+                "/reset - reset parametrs");
         Assertions.assertEquals(expectedResult,actualResult);
     }
 
@@ -58,6 +64,7 @@ class MessageServiceTest extends GiftgeneratorBotApplicationTests {
         SendMessage expectedResult = makeMessage("Type /support to see contact information. Type /donate to see donate iformation");
         Assertions.assertEquals(expectedResult,actualResult);
     }
+
 
     private SendMessage makeMessage(String text){
         SendMessage sendMessage = new SendMessage();
